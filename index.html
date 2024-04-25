@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+        CLASS NAMING SHORT FORMS
+        ------------------------
+        img  - image
+        cont - container
+        sec  - section
+        opp  - opponent
+        div  - division
+        tSocre - target score
+        cScore - Current score
+        var - variable
+     -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- toss sectiion -->
+    <div class="wrapper">
+      <input type="radio" name="select" id="option-1" checked>
+      <input type="radio" name="select" id="option-2">
+        <label for="option-1" class="option option-1">
+          <div class="dot"></div>
+           <span>Bowl</span>
+           </label>
+        <label for="option-2" class="option option-2">
+          <div class="dot"></div>
+           <span>Bat</span>
+        </label>
+     </div>
+
+    <section id="main">
+      <!-- Score Update Section -->
+      <section id="scoreUpdateSec">
+        <div class="updatesCont gradient-background">
+          <div class="cScoreDiv">
+            <h2 class="cScore">Score: <span class="cScoreVar">0</span></h2>
+          </div>
+          <div class="commentryDiv">
+            <h2 class="commentry">Start the game, Hit Ur Score!</h2>
+          </div>
+          <div class="tScoreDiv">
+            <h2 class="tScore">Target: <span class="tScoreVar">0</span></h2>
+            <h3 class="playIndicator">Toss: batting first🏏</h3>
+          </div>
+        </div>
+      </section>
+      <!-- Play Section (Images & Scoreing) -->
+      <section id="playSec">
+        <div class="playCont">
+          <div class="handImgCont">
+            <div class="oppHandImg">
+              <img src="img/initialHandSign.jpg" alt="Hand Sign" />
+            </div>
+            <div class="playerHandImg">
+              <img src="img/initialHandSign.jpg" alt="Hand Sign" />
+            </div>
+          </div>
+          <div class="scoreSelectionCont gradient-background">
+            <h3 class="selectionNum">1</h3>
+            <h3 class="selectionNum">2</h3>
+            <h3 class="selectionNum">3</h3>
+            <h3 class="selectionNum">4</h3>
+            <h3 class="selectionNum">5</h3>
+            <h3 class="selectionNum">6</h3>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer class="gradient-background">
+        <div class="footerNoteDiv"><h3>Made with Passion🏏by ?</h3></div>
+      </footer></section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js" async defer></script>
+  </body>
+</html>
