@@ -162,12 +162,20 @@ function outCome(userRun, toss) {
       console.log("Opponent Out");
       changeComment(7);
       // result commentry
-      if (toss == "bowl") {
-        timedChange(".commentry", "Opponent WON!", 1000);
-        speakText("Opponent Won");
+      if (getCScore() == parseInt($(".tScoreVar").text()) - 1) {
+        timedChange(".commentry", "It's a Draw!", 1000);
+        speakText("It is a Draw");
+        controlHide();
       } else {
-        timedChange(".commentry", "U WIN! 👑", 1000);
-        speakText("You have won");
+        if (toss == "bowl") {
+          timedChange(".commentry", "Opponent WON!", 1000);
+          speakText("Opponent Won");
+          controlHide();
+        } else {
+          timedChange(".commentry", "U WIN! 👑", 1000);
+          speakText("You have won");
+          controlHide();
+        }
       }
       windowRef();
     }
@@ -184,14 +192,16 @@ function outCome(userRun, toss) {
       speakText("You have won");
       console.log("came if");
       runChange(oppRun);
+      controlHide();
       windowRef();
     } else if (
       flag == 1 &&
       getCScore() + oppRun > parseInt($(".tScoreVar").text())
     ) {
       timedChange(".commentry", "Opponent WON!", 1000);
-      speakText("Opponent Won")
+      speakText("Opponent Won");
       runChange(oppRun);
+      controlHide();
       windowRef();
     } else if (flag == 1) {
       runChange(oppRun);
@@ -256,3 +266,9 @@ function speakText(text) {
 $(".updatesCont").click(function () {
   speakText(getCScore());
 });
+
+
+function controlHide() { 
+  $(".scoreSelectionCont").hide();
+  console.log("Shakka");
+ }
