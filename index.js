@@ -147,6 +147,7 @@ function outCome(userRun, toss) {
     if (flag == 0) {
       console.log("User out");
       speakText("Wicket");
+      controlHide();
       changeComment(7);
       var target = getCScore() + 1;
       if (toss == "bowl") {
@@ -156,6 +157,7 @@ function outCome(userRun, toss) {
       }
       $(".tScoreVar").text(target);
       $(".cScoreVar").text(0);
+      controlShow();
       flag = 1;
     } else {
       // control comes here if the second batting player is out (when flag == 1 & run1 == run2)
@@ -271,4 +273,11 @@ $(".updatesCont").click(function () {
 function controlHide() { 
   $(".scoreSelectionCont").hide();
   console.log("Shakka");
+ }
+
+function controlShow() { 
+  setTimeout(function () {
+    // Hide all elements with the class name "selectionNum" using jQuery
+    $(".scoreSelectionCont").show();
+  }, 3000);
  }
