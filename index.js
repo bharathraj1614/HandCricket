@@ -6,14 +6,14 @@ $("body, html").addClass("tossBody");
 
 $("input").click(function () {
   if ($("#option-1").is(":checked")) {
+    speakText("You are bowling first");
     toss = "bowl";
     $(".playIndicator").text("Toss bowling first🥎");
     $(".oppHandImg").addClass("border");
-    speakText("You are bowling first");
   } else {
+    speakText("You are batting first");
     toss = "bat";
     $(".playerHandImg").addClass("border");
-    speakText("You are batting first");
   }
   $(".wrapper").hide();
   console.log(toss);
