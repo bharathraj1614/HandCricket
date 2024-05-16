@@ -120,12 +120,9 @@ $(".selectionNum").click(function () {
   outCome(userRun, toss);
 
   setTimeout(function () {
-    // Hide all elements with the class name "selectionNum" using jQuery
     $(".selectionNum").show();
   }, 500);
 
-  // playSound(userChosenColour);
-  // animatePress(userChosenColour);
 });
 
 function outCome(userRun, toss) {
@@ -266,7 +263,7 @@ function speakText(text) {
 }
 
 $(".updatesCont").click(function () {
-  speakText(getCScore());
+  speakText("Current Score is "+getCScore());
 });
 
 
